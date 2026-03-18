@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Questionnaire Étudiants</title>
+<title>Questionnaire FinTech Étudiants</title>
 <link rel="icon" type="image/png" href="images/icon.png">
 
 <style>
@@ -13,18 +13,21 @@ body{
 }
 
 .container{
-    background: #833AB4;
-    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    background:white;
     padding:25px;
     border-radius:10px;
     max-width:700px;
     margin:auto;
+    color:black;
 }
 
 h1{
     text-align:center;
-    background-color: black;
+    background:black;
+    padding:10px;
+    border-radius:8px;
 }
+
 .section{
     margin-top:25px;
 }
@@ -37,6 +40,7 @@ label{
 textarea{
     width:100%;
     height:80px;
+    border-radius:5px;
 }
 
 button{
@@ -46,6 +50,11 @@ button{
     color:white;
     border:none;
     border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1a5edb;
 }
 </style>
 
@@ -55,84 +64,80 @@ button{
 
 <div class="container">
 
-<h1 style="color: yellow;">Questionnaire</h1>
+<h1 style="color: yellow;">Questionnaire FinTech</h1>
 
 <p>
-Sujet : Lancement d’une application mobile pour organiser les études
+Sujet : Lancement d’une application FinTech pour aider les étudiants à gérer leur argent et leurs études
 </p>
 
 <p>
-Ce questionnaire a pour objectif d’étudier l’intérêt des étudiants pour une nouvelle application mobile destinée à aider à organiser les études.
+Ce questionnaire vise à analyser les besoins des étudiants concernant une application mobile intelligente combinant gestion financière et organisation des études.
 </p>
 
+<form>
 
 <div class="section">
 <h3>I. Informations générales</h3>
 
 <p>Sexe :</p>
-<label><input type="radio" name="sexe"> Homme</label>
-<label><input type="radio" name="sexe"> Femme</label>
+<label><input type="radio" name="sexe" value="homme"> Homme</label>
+<label><input type="radio" name="sexe" value="femme"> Femme</label>
 
 <p>Âge :</p>
-<label><input type="radio" name="age"> 18 – 20</label>
-<label><input type="radio" name="age"> 21 – 23</label>
-<label><input type="radio" name="age"> 24 ans ou plus</label>
+<label><input type="radio" name="age" value="18-20"> 18 – 20</label>
+<label><input type="radio" name="age" value="21-23"> 21 – 23</label>
+<label><input type="radio" name="age" value="24+"> 24 ans ou plus</label>
 
 <p>Statut :</p>
-<label><input type="radio" name="statut"> Étudiant</label>
-<label><input type="radio" name="statut"> Employé</label>
-<label><input type="radio" name="statut"> Autre</label>
+<label><input type="radio" name="statut" value="etudiant"> Étudiant</label>
+<label><input type="radio" name="statut" value="employe"> Employé</label>
+<label><input type="radio" name="statut" value="autre"> Autre</label>
 
 </div>
 
 
 <div class="section">
-<h3>II. Utilisation des applications</h3>
+<h3>II. Gestion financière</h3>
 
-<p>Utilisez-vous des applications pour organiser vos études ?</p>
-<label><input type="radio" name="app"> Oui</label>
-<label><input type="radio" name="app"> Non</label>
+<p>Gérez-vous votre argent via une application ?</p>
+<label><input type="radio" name="moneyApp" value="oui"> Oui</label>
+<label><input type="radio" name="moneyApp" value="non"> Non</label>
 
-<p>À quelle fréquence utilisez-vous ce type d’application ?</p>
-<label><input type="radio" name="freq"> Tous les jours</label>
-<label><input type="radio" name="freq"> Une fois par semaine</label>
-<label><input type="radio" name="freq"> Occasionnellement</label>
-<label><input type="radio" name="freq"> Rarement</label>
-
-</div>
-
-
-<div class="section">
-<h3>III. Critères de choix</h3>
-
-<p>Quels critères influencent votre choix ?</p>
-<label><input type="checkbox"> Facilité d’utilisation</label>
-<label><input type="checkbox"> Design</label>
-<label><input type="checkbox"> Fonctionnalités</label>
-<label><input type="checkbox"> Gratuité</label>
-<label><input type="checkbox"> Recommandation</label>
-
-<p>Seriez-vous prêt à payer pour une application utile ?</p>
-<label><input type="radio" name="pay"> Oui</label>
-<label><input type="radio" name="pay"> Non</label>
-<label><input type="radio" name="pay"> Peut-être</label>
+<p>Quel est votre principal problème financier ?</p>
+<label><input type="checkbox" value="budget"> Mauvaise gestion du budget</label>
+<label><input type="checkbox" value="suivi"> Suivi des dépenses</label>
+<label><input type="checkbox" value="epargne"> Difficulté à épargner</label>
+<label><input type="checkbox" value="autre"> Autre</label>
 
 </div>
 
 
 <div class="section">
-<h3>IV. Marketing et communication</h3>
+<h3>III. Utilisation des applications</h3>
 
-<p>Où découvrez-vous les nouvelles applications ?</p>
-<label><input type="checkbox"> Réseaux sociaux</label>
-<label><input type="checkbox"> Amis</label>
-<label><input type="checkbox"> Publicité</label>
-<label><input type="checkbox"> Play Store / App Store</label>
+<p>À quelle fréquence utilisez-vous des applications d’organisation ?</p>
+<label><input type="radio" name="freq" value="daily"> Tous les jours</label>
+<label><input type="radio" name="freq" value="weekly"> Une fois par semaine</label>
+<label><input type="radio" name="freq" value="occasion"> Occasionnellement</label>
+<label><input type="radio" name="freq" value="rare"> Rarement</label>
 
-<p>Les avis des utilisateurs influencent-ils votre choix ?</p>
-<label><input type="radio" name="avis"> Oui</label>
-<label><input type="radio" name="avis"> Non</label>
-<label><input type="radio" name="avis"> Parfois</label>
+</div>
+
+
+<div class="section">
+<h3>IV. Fonctionnalités souhaitées</h3>
+
+<p>Quelles fonctionnalités voulez-vous dans une application idéale ?</p>
+<label><input type="checkbox"> Gestion de budget</label>
+<label><input type="checkbox"> Rappels de tâches</label>
+<label><input type="checkbox"> Statistiques financières</label>
+<label><input type="checkbox"> Synchronisation avec études</label>
+<label><input type="checkbox"> IA pour conseils</label>
+
+<p>Seriez-vous prêt à payer ?</p>
+<label><input type="radio" name="pay" value="oui"> Oui</label>
+<label><input type="radio" name="pay" value="non"> Non</label>
+<label><input type="radio" name="pay" value="maybe"> Peut-être</label>
 
 </div>
 
@@ -140,16 +145,16 @@ Ce questionnaire a pour objectif d’étudier l’intérêt des étudiants pour 
 <div class="section">
 <h3>V. Opinion</h3>
 
-<p>Quelles fonctionnalités aimeriez-vous trouver dans une application idéale ?</p>
-<textarea></textarea>
+<p>Donnez votre idée pour améliorer cette application :</p>
+<textarea name="idea"></textarea>
 
 </div>
 
 <button type="submit">Envoyer</button>
 
+</form>
+
 </div>
 
 </body>
-
-
 </html>
