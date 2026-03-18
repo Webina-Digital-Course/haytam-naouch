@@ -1,4 +1,154 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>HydroDuck</title>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
 <title>Questionnaire Étudiants</title>
-<link rel="icon" type="image/jpeg" href="images/icon.jpeg">
+<link rel="icon" type="image/png" href="images/icon.png">
+
+<style>
+body{
+    font-family: Arial;
+    background:#0e060c;
+    padding:20px;
+}
+
+.container{
+    background: #833AB4;
+background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    padding:25px;
+    border-radius:10px;
+    max-width:700px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    background-color: black;
+}
+.section{
+    margin-top:25px;
+}
+
+label{
+    display:block;
+    margin:5px 0;
+}
+
+textarea{
+    width:100%;
+    height:80px;
+}
+
+button{
+    margin-top:20px;
+    padding:10px 20px;
+    background:#2c7be5;
+    color:white;
+    border:none;
+    border-radius:5px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 style="color: yellow;">Questionnaire</h1>
+
+<p>
+Sujet : Lancement d’une application mobile pour organiser les études
+</p>
+
+<p>
+Ce questionnaire a pour objectif d’étudier l’intérêt des étudiants pour une nouvelle application mobile destinée à aider à organiser les études.
+</p>
+
+
+<div class="section">
+<h3>I. Informations générales</h3>
+
+<p>Sexe :</p>
+<label><input type="radio" name="sexe"> Homme</label>
+<label><input type="radio" name="sexe"> Femme</label>
+
+<p>Âge :</p>
+<label><input type="radio" name="age"> 18 – 20</label>
+<label><input type="radio" name="age"> 21 – 23</label>
+<label><input type="radio" name="age"> 24 ans ou plus</label>
+
+<p>Statut :</p>
+<label><input type="radio" name="statut"> Étudiant</label>
+<label><input type="radio" name="statut"> Employé</label>
+<label><input type="radio" name="statut"> Autre</label>
+
+</div>
+
+
+<div class="section">
+<h3>II. Utilisation des applications</h3>
+
+<p>Utilisez-vous des applications pour organiser vos études ?</p>
+<label><input type="radio" name="app"> Oui</label>
+<label><input type="radio" name="app"> Non</label>
+
+<p>À quelle fréquence utilisez-vous ce type d’application ?</p>
+<label><input type="radio" name="freq"> Tous les jours</label>
+<label><input type="radio" name="freq"> Une fois par semaine</label>
+<label><input type="radio" name="freq"> Occasionnellement</label>
+<label><input type="radio" name="freq"> Rarement</label>
+
+</div>
+
+
+<div class="section">
+<h3>III. Critères de choix</h3>
+
+<p>Quels critères influencent votre choix ?</p>
+<label><input type="checkbox"> Facilité d’utilisation</label>
+<label><input type="checkbox"> Design</label>
+<label><input type="checkbox"> Fonctionnalités</label>
+<label><input type="checkbox"> Gratuité</label>
+<label><input type="checkbox"> Recommandation</label>
+
+<p>Seriez-vous prêt à payer pour une application utile ?</p>
+<label><input type="radio" name="pay"> Oui</label>
+<label><input type="radio" name="pay"> Non</label>
+<label><input type="radio" name="pay"> Peut-être</label>
+
+</div>
+
+
+<div class="section">
+<h3>IV. Marketing et communication</h3>
+
+<p>Où découvrez-vous les nouvelles applications ?</p>
+<label><input type="checkbox"> Réseaux sociaux</label>
+<label><input type="checkbox"> Amis</label>
+<label><input type="checkbox"> Publicité</label>
+<label><input type="checkbox"> Play Store / App Store</label>
+
+<p>Les avis des utilisateurs influencent-ils votre choix ?</p>
+<label><input type="radio" name="avis"> Oui</label>
+<label><input type="radio" name="avis"> Non</label>
+<label><input type="radio" name="avis"> Parfois</label>
+
+</div>
+
+
+<div class="section">
+<h3>V. Opinion</h3>
+
+<p>Quelles fonctionnalités aimeriez-vous trouver dans une application idéale ?</p>
+<textarea></textarea>
+
+</div>
+
+<button type="submit">Envoyer</button>
+
+</div>
+
+</body>
+
+</html>
