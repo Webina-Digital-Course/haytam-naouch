@@ -1,10 +1,15 @@
+@ -1,805 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>HydroDuck</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@600;700;800;900&display=swap" rel="stylesheet">
+<title>Questionnaire Étudiants</title>
+<link rel="icon" type="image/jpeg" href="images/icon.jpeg">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -13,6 +18,49 @@
   --gold:#f5a623;--gold2:#f7c752;--green:#22c55e;--pink:#f953c6;
   --red:#ef4444;--r:18px;--r2:22px;
   --sh:0 6px 24px rgba(29,161,242,.13);
+  }
+
+body{
+    font-family: Arial;
+    background:#0e060c;
+    padding:20px;
+}
+
+.container{
+    background: #833AB4;
+background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    padding:25px;
+    border-radius:10px;
+    max-width:700px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    background-color: black;
+}
+
+.section{
+    margin-top:25px;
+}
+
+label{
+    display:block;
+    margin:5px 0;
+}
+
+textarea{
+    width:100%;
+    height:80px;
+}
+
+button{
+    margin-top:20px;
+    padding:10px 20px;
+    background:#2c7be5;
+    color:white;
+    border:none;
+    border-radius:5px;
 }
 html,body{background:var(--sky);font-family:'Nunito',sans-serif;color:var(--text);overflow-x:hidden;}
 
@@ -212,7 +260,9 @@ html,body{background:var(--sky);font-family:'Nunito',sans-serif;color:var(--text
 .sec-lbl2{font-family:'Baloo 2',cursive;font-size:13px;font-weight:800;background:var(--blue2);color:#fff;display:inline-block;padding:4px 13px;border-radius:20px;margin-bottom:12px;}
 .sdiv{height:1px;background:#eef6ff;margin:4px 0;}
 </style>
+
 </head>
+
 <body>
 
 <!-- TOPBAR -->
@@ -241,6 +291,7 @@ html,body{background:var(--sky);font-family:'Nunito',sans-serif;color:var(--text
     </div>
   </div>
 </div>
+<div class="container">
 
 <!-- SVG DEFS -->
 <svg width="0" height="0" style="position:absolute;pointer-events:none">
@@ -342,6 +393,7 @@ html,body{background:var(--sky);font-family:'Nunito',sans-serif;color:var(--text
     <button class="bb bb-b" onclick="toast('⏰ Reminder set!')"><span class="i">🔔</span>Remind Me</button>
   </div>
 </div>
+<h1 style="color: yellow;">Questionnaire</h1>
 
 <!-- ════════ SCREEN 2: ADD WATER ════════ -->
 <div class="sc" id="s-add">
@@ -436,6 +488,9 @@ html,body{background:var(--sky);font-family:'Nunito',sans-serif;color:var(--text
     <button class="bb bb-b" onclick="toast('🚿 Water source tracked!')"><span class="i">🚿</span>Water Source</button>
   </div>
 </div>
+<p>
+Sujet : Lancement d’une application mobile pour organiser les études
+</p>
 
 <!-- ════════ SCREEN 3: CHALLENGE ════════ -->
 <div class="sc" id="s-challenge">
@@ -502,6 +557,27 @@ html,body{background:var(--sky);font-family:'Nunito',sans-serif;color:var(--text
     <button class="bb bb-t" onclick="toast('📤 Progress shared!')"><span class="i">📤</span>Share Progress</button>
   </div>
 </div>
+<p>
+Ce questionnaire a pour objectif d’étudier l’intérêt des étudiants pour une nouvelle application mobile destinée à aider à organiser les études.
+</p>
+
+
+<div class="section">
+<h3>I. Informations générales</h3>
+
+<p>Sexe :</p>
+<label><input type="radio" name="sexe"> Homme</label>
+<label><input type="radio" name="sexe"> Femme</label>
+
+<p>Âge :</p>
+<label><input type="radio" name="age"> 18 – 20</label>
+<label><input type="radio" name="age"> 21 – 23</label>
+<label><input type="radio" name="age"> 24 ans ou plus</label>
+
+<p>Statut :</p>
+<label><input type="radio" name="statut"> Étudiant</label>
+<label><input type="radio" name="statut"> Employé</label>
+<label><input type="radio" name="statut"> Autre</label>
 
 <!-- ════════ SCREEN 4: ANALYTICS ════════ -->
 <div class="sc" id="s-analytics">
@@ -645,6 +721,20 @@ html,body{background:var(--sky);font-family:'Nunito',sans-serif;color:var(--text
     <button class="bb bb-b" onclick="toast('👥 Community challenges...')"><span class="i">👥</span>Community Challenges</button>
     <button class="bb bb-t" onclick="toast('🤝 Find friends...')"><span class="i">🤝</span>Find Friends</button>
   </div>
+
+<div class="section">
+<h3>II. Utilisation des applications</h3>
+
+<p>Utilisez-vous des applications pour organiser vos études ?</p>
+<label><input type="radio" name="app"> Oui</label>
+<label><input type="radio" name="app"> Non</label>
+
+<p>À quelle fréquence utilisez-vous ce type d’application ?</p>
+<label><input type="radio" name="freq"> Tous les jours</label>
+<label><input type="radio" name="freq"> Une fois par semaine</label>
+<label><input type="radio" name="freq"> Occasionnellement</label>
+<label><input type="radio" name="freq"> Rarement</label>
+
 </div>
 
 <!-- ════════ SCREEN 6: CUSTOMIZE ════════ -->
@@ -697,6 +787,22 @@ html,body{background:var(--sky);font-family:'Nunito',sans-serif;color:var(--text
     <button class="bb bb-pk" onclick="toast('🎨 Change theme!')"><span class="i">🎨</span>Change Theme</button>
     <button class="bb bb-g" onclick="toast('🔔 Notification settings!')"><span class="i">🔔</span>Notification Settings</button>
   </div>
+
+<div class="section">
+<h3>III. Critères de choix</h3>
+
+<p>Quels critères influencent votre choix ?</p>
+<label><input type="checkbox"> Facilité d’utilisation</label>
+<label><input type="checkbox"> Design</label>
+<label><input type="checkbox"> Fonctionnalités</label>
+<label><input type="checkbox"> Gratuité</label>
+<label><input type="checkbox"> Recommandation</label>
+
+<p>Seriez-vous prêt à payer pour une application utile ?</p>
+<label><input type="radio" name="pay"> Oui</label>
+<label><input type="radio" name="pay"> Non</label>
+<label><input type="radio" name="pay"> Peut-être</label>
+
 </div>
 
 </div><!-- /wrap -->
@@ -709,6 +815,20 @@ html,body{background:var(--sky);font-family:'Nunito',sans-serif;color:var(--text
   <button class="bni" id="bn-analytics" onclick="go('analytics')"><div class="bni-ico">📊</div><span>Analytics</span></button>
   <button class="bni" id="bn-community" onclick="go('community')"><div class="bni-ico">👥</div><span>Community</span></button>
   <button class="bni" id="bn-customize" onclick="go('customize')"><div class="bni-ico">🎨</div><span>Customize</span></button>
+<div class="section">
+<h3>IV. Marketing et communication</h3>
+
+<p>Où découvrez-vous les nouvelles applications ?</p>
+<label><input type="checkbox"> Réseaux sociaux</label>
+<label><input type="checkbox"> Amis</label>
+<label><input type="checkbox"> Publicité</label>
+<label><input type="checkbox"> Play Store / App Store</label>
+
+<p>Les avis des utilisateurs influencent-ils votre choix ?</p>
+<label><input type="radio" name="avis"> Oui</label>
+<label><input type="radio" name="avis"> Non</label>
+<label><input type="radio" name="avis"> Parfois</label>
+
 </div>
 
 <div class="toast" id="toast"></div>
@@ -753,6 +873,8 @@ function syncAdd() {
   document.getElementById('st1').textContent = lit+'L';
   document.getElementById('std').textContent = def+'L';
 }
+<div class="section">
+<h3>V. Opinion</h3>
 
 /* ADD WATER */
 function sa(v, el) {
@@ -771,6 +893,8 @@ function aw() {
   syncHome(); syncAdd();
   toast('💧 +'+sel+'ml added! Keep going! 🦆');
 }
+<p>Quelles fonctionnalités aimeriez-vous trouver dans une application idéale ?</p>
+<textarea></textarea>
 
 /* TIMER */
 let ts = 12*3600+45*60+30;
@@ -789,13 +913,17 @@ function wo(el,e) {
   el.classList.add('on');
   toast('🎩 '+e+' equipped!');
 }
+</div>
 
-/* TOAST */
-function toast(msg) {
+   /* TOAST */
+  function toast(msg) {
   const t=document.getElementById('toast');
   t.textContent=msg; t.classList.add('show');
   clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove('show'),2600);
-}
+  }
+  <button type="submit">Envoyer</button>
+
+</div>
 
 /* INIT */
 syncHome();
